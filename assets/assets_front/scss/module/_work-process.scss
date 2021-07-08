@@ -1,0 +1,100 @@
+/*-------------------------
+    Work Process
+-------------------------*/
+.work-process {
+    overflow-x: hidden;
+    padding-bottom: 290px;
+
+    .process-items-wrapper {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            left: 15px;
+            width: 3000px;
+            height: 1px;
+            background-color: rgba($color-white, 20%);
+        }
+    }
+}
+
+.process-item {
+    position: relative;
+    padding-bottom: 25px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px rgba($color-white, 20%);
+        background-color: $color-secondary;
+    }
+
+    .process-item__icon {
+        font-size: 70px;
+        color: $color-white;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+
+    &:hover {
+        .process-item__icon {
+            @include animation("slideTopDown 1s infinite alternate");
+        }
+    }
+
+    .process-item__title {
+        color: $color-white;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+        padding-right: 40px;
+    }
+
+    .process-item__desc {
+        color: $color-secondary;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width:1300px) {
+    .work-process-boxed {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width:1200px) {
+    .process-item .process-item__title {
+        padding-right: 0;
+    }
+}
+
+@media (max-width:992px) {
+    .process-item {
+        margin-bottom: 30px;
+
+        .process-item__icon {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .process-item__title {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .work-process .process-items-wrapper:after {
+        display: none;
+    }
+}

@@ -1,0 +1,6 @@
+a:3:{s:4:"time";i:1624604272;s:3:"ttl";i:3600;s:4:"data";s:191:"<?php echo $this->_include('layouts/header'); ?>
+<?php echo $this->_include('layouts/menu'); ?>
+<?php echo $this->_yield('content'); ?>
+<?php echo $this->_include('layouts/footer'); ?>
+
+";}

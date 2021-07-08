@@ -1,0 +1,325 @@
+/*-----------------------
+    banner
+------------------------*/
+.banner-layout1 {
+    img {
+        position: relative;
+        z-index: 1;
+    }
+
+    .heading__desc {
+        font-size: 17px;
+        line-height: 27px;
+        font-weight: 600;
+    }
+
+    .fancybox-item {
+        background-color: $color-white;
+        text-align: center;
+        border-radius: 3px;
+        max-width: 165px;
+        padding: 31px 10px;
+
+        .fancybox-item__icon {
+            margin-bottom: 15px;
+        }
+
+        .fancybox-item__title {
+            color: $color-body;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+    }
+
+    .cta-banner {
+        max-width: 200px;
+        position: absolute;
+        top: 0;
+        left: 220px;
+        padding: 0 40px 50px;
+
+        .cta-banner__subtitle {
+            font-size: 60px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .cta-banner__title {
+            line-height: 1.4;
+            letter-spacing: 1px;
+        }
+
+        .btn {
+            i {
+                line-height: 29px;
+                border-radius: 50%;
+                color: $color-white;
+                border: 1px solid $color-white;
+                background-color: transparent;
+            }
+
+            &:hover i {
+                color: $color-secondary;
+                background-color: $color-white;
+            }
+        }
+    }
+
+    .video__box {
+        position: absolute;
+        left: 220px;
+        bottom: -70px;
+        width: 215px;
+        height: 165px;
+
+        .video__btn {
+            position: absolute;
+            z-index: 4;
+            top: 50%;
+            left: 50%;
+            @include prefix(transform, translate(-50%, -50%), webkit moz ms o);
+        }
+    }
+
+    .video__box-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        text-align: center;
+        background-color: $color-secondary;
+        height: 55%;
+        padding-top: 25%;
+
+        span {
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
+}
+
+.banner-layout2 {
+    .heading__desc {
+        font-size: 17px;
+        line-height: 27px;
+        font-weight: 600;
+    }
+
+    .fancybox-item {
+        background-color: $color-white;
+        text-align: center;
+        border-radius: 3px;
+        max-width: 165px;
+        padding: 31px 10px;
+
+        .fancybox-item__icon {
+            margin-bottom: 15px;
+        }
+
+        .fancybox-item__title {
+            color: $color-body;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+    }
+
+    .inner-padding {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .btn__lg {
+        min-width: 270px;
+
+        &:hover {
+            color: $color-primary;
+
+            i {
+                color: $color-white;
+                background-color: $color-primary;
+            }
+        }
+
+        &:before {
+            background-color: $color-white !important;
+        }
+    }
+}
+
+.banner-layout3 {
+    padding-bottom: 200px;
+
+    .fancybox-item {
+        padding: 35px;
+        border-radius: 3px;
+        border: 1px solid rgba(231, 235, 239, .2);
+        @include prefix(transition, all .4s linear, webkit moz ms o);
+
+        .fancybox-item__icon {
+            color: $color-secondary;
+            margin-bottom: 15px;
+            @include prefix(transition, all .3s linear, webkit moz ms o);
+        }
+
+        .fancybox-item__title {
+            color: $color-white;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 0;
+            @include prefix(transition, all .3s linear, webkit moz ms o);
+        }
+
+        &:hover {
+            border-color: $color-secondary;
+            background-color: $color-secondary;
+
+            .fancybox-item__icon,
+            .fancybox-item__title {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.banner-layout4 {
+    .video-banner {
+        min-height: 120px;
+    }
+
+    .text__link {
+        padding-top: 10px;
+    }
+
+    .banner-contact {
+        padding: 40px 0 40px 40px;
+
+        .banner-contact__title {
+            color: $color-white;
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 0;
+            margin-right: 30px;
+        }
+
+        .banner-contact__icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin-right: 20px;
+            border-radius: 40px;
+            color: $color-white;
+            background-color: $color-secondary;
+        }
+    }
+}
+
+/* Extra Large Size Screens */
+@media (min-width:1400px) {
+
+    .banner-layout1 .inner-padding,
+    .banner-layout2 .inner-padding {
+        padding-right: 120px;
+        padding-left: 120px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .banner-layout1 .inner-padding {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .banner-layout1:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 220px;
+        height: 100%;
+        z-index: 0;
+        background-color: $color-white;
+    }
+
+    .banner-gray-top:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 220px;
+        height: 120px;
+        z-index: 1;
+        background-color: $color-gray;
+    }
+}
+
+@media (max-width: 1200px) {
+    .banner-layout1 {
+        padding-top: 0 !important;
+
+        .inner-padding {
+            padding: 100px 30px 0 !important;
+            text-align: center;
+        }
+
+        .cta-banner {
+            padding: 0 20px 20px;
+        }
+
+        .cta-banner,
+        .video__box {
+            left: 50%;
+            @include prefix(transform, translateX(-50%), webkit moz ms o);
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .banner-layout2 {
+        padding-top: 50px;
+        padding-bottom: 180px;
+    }
+
+    .banner-layout3 .fancybox-item {
+        padding: 15px;
+
+        .fancybox-item__icon {
+            margin-bottom: 5px;
+        }
+
+        .fancybox-item__title {
+            font-size: 14px;
+        }
+    }
+
+    .banner-layout4 .banner-contact {
+        padding: 10px;
+        -ms-flex-direction: column;
+        flex-direction: column;
+
+        .banner-contact__title {
+            text-align: center;
+            margin: 5px 0 10px;
+        }
+    }
+}
+
+/* Extra Small Devices */
+@include xs-screens {
+    .banner-layout1 {
+        .heading__desc {
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        .fancybox-wrapper {
+            -ms-flex-pack: distribute !important;
+            justify-content: space-around !important;
+        }
+    }
+}

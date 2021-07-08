@@ -1,0 +1,134 @@
+/*--------------------
+     Team
+---------------------*/
+.member {
+    position: relative;
+    margin-bottom: 30px;
+
+    .member__img {
+        position: relative;
+
+        img {
+            width: 100%;
+            border-radius: 4px;
+        }
+    }
+
+    .member__info {
+        padding-top: 24px;
+
+        .member__name {
+            font-size: 21px;
+            margin-bottom: 7px;
+        }
+
+        .member__desc {
+            margin-bottom: 0;
+        }
+    }
+
+    .member__hover {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 4px;
+        @include prefix(transition, all .5s linear, webkit moz ms o);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(9, 9, 121, .4) 60%);
+    }
+
+    .member__content-inner {
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        width: 100%;
+        opacity: 0;
+        @include prefix(transition, all .5s linear, webkit moz ms o);
+    }
+
+    .social__icons li {
+        margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            color: $color-white;
+            opacity: 0;
+            @include prefix(transition, all .3s linear, webkit moz ms o);
+
+            &:hover {
+                color: $color-heading;
+            }
+        }
+    }
+
+    &:hover {
+        .member__hover {
+            opacity: 1;
+        }
+
+        .member__content-inner {
+            bottom: 50px;
+            opacity: 1;
+        }
+
+        .social__icons li a {
+            opacity: 1;
+        }
+    }
+}
+
+.team-layout2 {
+    .member {
+        .member__hover {
+            background: transparent;
+        }
+
+        .member__content-inner {
+            background-color: $color-secondary;
+            border-radius: 4px;
+            width: auto;
+            width: 150px;
+            left: 50%;
+            @include prefix(transform, translateX(-50%), webkit moz ms o);
+
+            .social__icons {
+                li {
+                    margin-right: 0;
+
+                    a {
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+
+        &:hover .member__content-inner {
+            bottom: 30px;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .member {
+        max-width: 400px;
+        margin: 0 auto 30px;
+
+        .member__info {
+            padding-top: 15px;
+
+            .member__name {
+                font-size: 17px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

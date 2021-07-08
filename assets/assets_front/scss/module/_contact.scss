@@ -1,0 +1,276 @@
+/*----------------------------
+    Contact
+----------------------------*/
+.contact-chip {
+    position: relative;
+
+    .contact-chip__img {
+        min-width: 60px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding: 2px;
+        border: 2px solid $color-secondary;
+        margin-right: 17px;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .contact-chip__phone {
+        color: $color-primary;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 0;
+    }
+
+    .contact-chip__title {
+        font-size: 13px;
+    }
+}
+
+.contact-info-box {
+    margin-bottom: 30px;
+
+    .contact__info-img {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 25px;
+
+        img {
+            @include prefix(transition, all 0.9s ease, webkit moz ms o);
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            opacity: 0;
+            z-index: 1;
+            -webkit-transition: all .3s linear;
+            -moz-transition: all .3s linear;
+            -ms-transition: all .3s linear;
+            -o-transition: all .3s linear;
+            transition: all .3s linear;
+            background: -moz-linear-gradient(top, rgba(4, 17, 39, 0) 0%, rgba(4, 17, 39, 0) 48%, #041127 92%, #041127 100%);
+            background: -webkit-linear-gradient(top, rgba(4, 17, 39, 0) 0%, rgba(4, 17, 39, 0) 48%, #041127 92%, #041127 100%);
+            background: linear-gradient(to bottom, rgba(4, 17, 39, 0) 0%, rgba(4, 17, 39, 0) 48%, #041127 92%, #041127 100%);
+        }
+    }
+
+    &:hover .contact__info-img {
+        &:before {
+            opacity: .5;
+            height: 100%;
+        }
+
+        img {
+            @include prefix(transform, scale(1.1), webkit moz ms o);
+        }
+    }
+
+    .contact__info-box-title {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .contact__info-list {
+        margin-bottom: 0;
+
+        li {
+            font-size: 14px;
+            margin-bottom: 9px;
+
+            a {
+                color: $color-body;
+            }
+        }
+    }
+}
+
+.contact-panel {
+    position: relative;
+    z-index: 2;
+
+    .contact-panel__title {
+        font-size: 24px;
+        margin-bottom: 17px;
+    }
+
+    .contact-panel__desc {
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
+.contact-layout1 {
+    .contact-panel {
+        box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.1);
+        background-color: #fff;
+        padding: 60px 60px 40px;
+        border-radius: 5px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        .contact-panel__banner {
+            flex: 0 0 38%;
+            max-width: 38%;
+            padding-bottom: 20px;
+            min-height: 400px;
+        }
+
+        .contact-panel__banner__inner {
+            padding: 40px;
+        }
+
+        .contact-panel__banner__title {
+            color: $color-white;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .contact-panel__banner__desc {
+            color: $color-gray;
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 25px;
+        }
+
+        .contact-info-box .contact__info-list li {
+            color: $color-white;
+            margin-bottom: 6px;
+
+            a {
+                color: $color-white;
+            }
+        }
+
+        .contact-info-box .contact__info-box-title {
+            color: $color-white;
+            margin-bottom: 11px;
+        }
+
+        .contact-panel__form {
+            flex: 0 0 62%;
+            max-width: 62%;
+            padding-left: 50px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.contact-layout2 {
+    .contact-panel__form {
+        padding: 62px;
+        background-color: $color-white;
+        box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.1);
+    }
+
+    .contact-panel__info {
+        padding: 45px 50px 55px;
+
+        .contact-panel__info__title {
+            color: $color-white;
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+
+        .contact-panel__block__title {
+            color: $color-white;
+            font-size: 17px;
+            margin-bottom: 14px;
+        }
+
+        .contact-panel__block__list {
+            margin-bottom: 36px;
+
+            li {
+                color: $color-white;
+                font-size: 14px;
+            }
+        }
+
+        .btn {
+            margin-top: 12px;
+
+            &:hover {
+                color: $color-secondary;
+            }
+
+            &:before {
+                background-color: $color-white !important;
+            }
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@media (max-width:992px) {
+    .contact-panel {
+        padding: 20px;
+
+        .contact-panel__title {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .contact-panel__desc {
+            font-size: 13px;
+            line-height: 23px;
+        }
+    }
+
+    .contact-layout1 {
+        .contact-panel {
+            padding: 25px;
+
+            .contact-panel__banner,
+            .contact-panel__form {
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding-bottom: 20px;
+                padding-left: 0;
+            }
+
+            .contact-panel__banner__inner {
+                padding: 25px;
+            }
+        }
+    }
+
+    .contact-layout2 {
+        .contact-panel {
+            padding: 0;
+        }
+
+        .contact-panel__form {
+            padding: 20px;
+        }
+
+        .contact-panel__info {
+            padding: 20px;
+
+            .contact-panel__info__title {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+
+            .contact-panel__block__title {
+                font-size: 15px;
+                margin-bottom: 8px;
+            }
+
+            .contact-panel__block__list {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,337 @@
+/*-------------------------
+    Footer
+--------------------------*/
+.footer {
+    border-top: 2px solid #e7ebef;
+
+    p {
+        font-size: 14px;
+        line-height: 24px;
+        color: $color-gray;
+    }
+
+    .social__icons {
+        li {
+            margin-right: 9px;
+
+            a {
+                width: 42px;
+                height: 42px;
+                line-height: 42px;
+                text-align: center;
+                border: 1px solid #253b61;
+                color: $color-white;
+                font-size: 17px;
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: $color-white;
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+
+    .footer-contact__phone {
+        i {
+            font-size: 20px;
+            color: #3e4ab4;
+            margin-right: 15px;
+        }
+
+        a {
+            font-family: $font-heading;
+            font-size: 20px;
+            font-weight: 600;
+            color: $color-white;
+        }
+    }
+
+    .btn__icon {
+        font-size: 15px;
+        font-weight: 700;
+        color: $color-secondary;
+
+        i {
+            background-color: $color-secondary;
+            color: $color-white;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-left: 0;
+            margin-right: 10px;
+        }
+
+        &:hover {
+            color: $color-white;
+
+            i {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.footer-primary {
+    padding-top: 110px;
+    padding-bottom: 65px;
+}
+
+.footer-widget {
+    margin-bottom: 30px;
+}
+
+.footer-widget__title {
+    color: $color-white;
+    font-size: 17px;
+    text-transform: capitalize;
+    margin-bottom: 32px;
+}
+
+.footer-widget__newsletter {
+    padding-right: 30px;
+}
+
+.footer-widget__newsletter__form {
+    position: relative;
+    background-color: $color-secondary;
+    margin-top: -190px;
+    padding: 50px;
+    border-radius: 4px;
+
+    .form-control {
+        border: 1px solid rgba($color-white, 50%);
+        color: $color-gray;
+        font-size: 14px;
+        height: 60px;
+        margin-bottom: 30px;
+
+        &::-webkit-input-placeholder {
+            color: $color-gray;
+        }
+
+        &:-moz-placeholder {
+            color: $color-gray;
+        }
+
+        &::-moz-placeholder {
+            color: $color-gray;
+        }
+
+        &:-ms-input-placeholder {
+            color: $color-gray;
+        }
+    }
+
+    .btn {
+        min-width: 120px;
+        height: 60px;
+        line-height: 60px;
+
+        &:hover {
+            color: $color-secondary;
+        }
+
+        &:before {
+            background-color: $color-white !important;
+        }
+    }
+
+    .footer-widget__newsletter__icon {
+        font-size: 65px;
+        color: $color-white;
+        display: block;
+        margin-bottom: 18px;
+    }
+
+    .footer-widget__newsletter__title {
+        font-size: 22px;
+        color: $color-white;
+        font-weight: 700;
+        margin-bottom: 34px;
+    }
+}
+
+.footer-widget-nav li a {
+    display: block;
+    position: relative;
+    color: $color-gray;
+    font-size: 14px;
+    margin-bottom: 11px;
+
+    &:hover {
+        color: $color-secondary;
+    }
+}
+
+.footer__copyright-links {
+    li {
+        margin-right: 16px;
+        margin-bottom: 9px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            display: block;
+            position: relative;
+            color: $color-white;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: .4px;
+
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+
+        &:last-child a {
+            margin-right: 0;
+        }
+    }
+}
+
+.footer-secondary {
+    background-color: #081e45;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.footer-contact__item {
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+    .footer-contact__icon {
+        width: 37px;
+        height: 37px;
+        line-height: 37px;
+        text-align: center;
+        flex: 0 0 37px;
+        margin-right: 15px;
+        border-radius: 3px;
+        color: $color-white;
+        background-color: $color-secondary;
+    }
+
+    .footer-contact__text {
+        span {
+            display: block;
+            font-size: 13px;
+            line-height: 1;
+        }
+
+        strong,
+        a {
+            font-size: 14px;
+            line-height: 1;
+            color: #51668a;
+        }
+    }
+}
+
+/* Scroll Top Button */
+#scrollTopBtn {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    opacity: 0;
+    z-index: 1000;
+    font-size: 18px;
+    border-radius: 50%;
+    color: $color-white;
+    background-color: $color-primary;
+    overflow: hidden;
+    @include prefix(transition, all .3s ease-in-out, webkit moz ms o);
+
+    &:hover {
+        background-color: $color-dark;
+    }
+}
+
+#scrollTopBtn.actived {
+    right: 30px;
+    opacity: 1;
+}
+
+@media (min-width: 1200px) {
+    .footer-widget-newsletter {
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .footer-widget-nav li a,
+    .footer__copyright-links li a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer .social__icons {
+        -ms-flex-pack: start !important;
+        justify-content: flex-start !important;
+        margin-top: 20px;
+    }
+
+    .footer-widget__newsletter__form {
+        margin-top: 0;
+        padding: 20px;
+
+        .footer-widget__newsletter__title {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+/* Medium Size Screens */
+@include md-screens {
+    .footer-primary {
+        padding-top: 70px;
+        padding-bottom: 20px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .footer-primary {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+
+    .footer-primary .footer-widget__title {
+        margin-bottom: 20px;
+    }
+
+    .footer-secondary {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .footer-contact__item {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    }
+}
+
+/* Extra Small Devices */
+@include xs-screens {
+    #scrollTopBtn {
+        bottom: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    #scrollTopBtn.actived {
+        right: 20px;
+    }
+}
