@@ -9,7 +9,7 @@ class Admin extends CI_Controller {
 		$this->load->library('session');
 		$this->load->helper('encrypt');
 		$this->load->helper('wa');
-		if ($this->session->userdata('role')!= "Super Admin") {
+		if ($this->session->userdata('role')!= "") {
 			redirect('Login/index');
 		}
 		date_default_timezone_set('Asia/Jakarta');
