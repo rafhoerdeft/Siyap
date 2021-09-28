@@ -196,11 +196,11 @@ $db['sms'] = array(
 
 	'dsn'	=> '',
 
-	'hostname' => '192.168.5.39',
+	'hostname' => '',
 
-	'username' => 'useraspirasi',
+	'username' => '',
 
-	'password' => 'M7k8zYLxpCcKyZbh',
+	'password' => '',
 
 	'database' => 'sms',
 
