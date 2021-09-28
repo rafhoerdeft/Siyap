@@ -16,23 +16,6 @@ class Dashboard extends CI_Controller
 		$this->get_visitor();
 	}
 
-	public function index_old()
-	{
-		$data['id_nav'] = 1;
-
-		$select = 'count(usr.id_user) jml_user';
-		$table = array(
-			'users usr',
-			'role'
-		);
-		// $data['jml_user'] = $this->MasterData->getSelectData($select,$table)->row()->jml_user;
-		$where = "usr.id_role = role.id_role AND role = 'User'";
-		$data['jml_user'] = $this->MasterData->getWhereData($select, $table, $where)->row()->jml_user;
-		$this->load->view('Dashboard/header');
-		$this->load->view('Dashboard/navigation', $data);
-		$this->load->view('Dashboard/dashboard', $data);
-		$this->load->view('Dashboard/footer');
-	}
 
 	public function index($kategori = 'Damkar')
 	{
