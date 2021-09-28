@@ -9,9 +9,7 @@ class Damkar extends CI_Controller {
 		$this->load->helper('encrypt');
 		$this->load->helper('wa');
 		$this->load->library('session');
-		if ($this->session->userdata('role')!= "Operator Damkar" AND $this->session->userdata('role')!= "Admin Damkar") {
-			redirect('Login/index');
-		}
+		
 		date_default_timezone_set('Asia/Jakarta');
 		$this->login_id = $this->session->userdata('id_user');
 		// $this->sms = $this->load->database('sms', TRUE);
