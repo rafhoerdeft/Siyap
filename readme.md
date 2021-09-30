@@ -1,6 +1,7 @@
 Aplikasi layanan & management pelaporan Damkar
-(siyap.magelangkab.go.id)
-Create using CodeIgniter 3
+<br />
+(https://siyap.magelangkab.go.id)
+<br />Create using CodeIgniter 3
 
 ![beranda](https://user-images.githubusercontent.com/44487637/135443375-c40f332b-379c-4a5b-9704-4cf24a2d9b90.JPG)
 ![info](https://user-images.githubusercontent.com/44487637/135443395-4a2a137d-9f54-425b-980a-aa81cc109f6f.JPG)
